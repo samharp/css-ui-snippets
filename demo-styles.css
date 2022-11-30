@@ -1,0 +1,25 @@
+/* styles that just make the demo look pretty */
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #333333;
+  font-size: 18px;
+}
+
+/* page title */
+h1{
+  font-family: 'Poppins', sans-serif;
+  font-size: 50px;
+  /* line-height: 80px; */
+}
+
+/* page sections */
+section{
+  margin-bottom:50px;
+}
+
+/* page section headers */
+h2{
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+}
