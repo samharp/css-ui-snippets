@@ -1,8 +1,76 @@
+/* specific pieces of UI */
 
-
-.ui-item{
-  margin-bottom:20px;
+/* toggle switches */
+/* input wrapper (what is clickable) */
+.input-wrapper.toggle-switch-wrapper{
+  display:inline-flex;
+  align-items: center;
+  cursor:pointer;
 }
-.ui-item:last-child{
-  margin-bottom:0;
+
+/* hidden input; makes it work */
+.input-wrapper.toggle-switch-wrapper input{
+  opacity:0;
+  position:absolute;
+  top:0;
+  right:0;
+  user-select: none;
+}
+
+/* input that is shown */
+.toggle-switch{
+  overflow:hidden;
+  background-color:#dddddd;
+  border-radius:50px;
+  width:40px;
+  height:14px;
+  /* box-shadow:0px 8px 17px -8px rgb(0 0 0 / 10%); */
+  transition:.25s background-color;
+}
+/* switch dot (white) */
+.toggle-switch .switch{
+  transition:left .25s;
+  background-color:white;
+  border-radius:50px;
+  width:10px;
+  height:10px;
+  position:absolute;
+  top:2px;
+  left:2px;
+  box-shadow:1px 0px 2px 0px rgb(0 0 0 / 10%)
+}
+
+/* status label (checked is by default) */
+.input-label-container{
+  position:relative;
+  margin-left:10px;
+  user-select: none;
+}
+.input-status-label{
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  transition: opacity .15s;
+  left: 0;
+  transform: translateY(-50%);
+  color:#dddddd;
+  font-weight:800;
+  font-size:10px;
+}
+input:not(:checked) ~ .input-label-container .unchecked-label{
+  opacity:1;
+}
+
+
+/* when checked */
+input:checked ~ .toggle-switch{
+  background-color:#239461;
+}
+input:checked ~ .toggle-switch .switch{
+  left:calc(100% - 12px);
+}
+
+input:checked ~ .input-label-container .checked-label{
+  opacity:1;
+  color:#239461;
 }

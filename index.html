@@ -6,7 +6,6 @@
 
   <title>CSS UI Snippets</title>
 
-  
 
   <!--------->
   <!-- css -->
@@ -32,34 +31,6 @@
       user-select: none;
     }
 
-    /* toggle switches */
-    .toggle-switch{
-      background-color:#eeeeee;
-      border-radius:50px;
-      width:40px;
-      height:14px;
-    }
-    .toggle-switch input{
-      opacity:0;
-      position:absolute;
-      top:0;
-      right:0;
-      /* user-select: none; */
-    }
-    .toggle-switch .switch{
-      transition:left .25s;
-      background-color:white;
-      border-radius:50px;
-      width:10px;
-      height:10px;
-      position:absolute;
-      top:2px;
-      left:2px;
-    }
-    .toggle-switch input:checked + .switch{
-      left:calc(100% - 12px);
-    }
-
     /*  */
   </style>
 
@@ -70,9 +41,24 @@
   <section>
     <h2>Toggle Switch</h2>
     <div class="input-row">
-      <label class="input-container toggle-switch">
+      
+      <!-- clickable/interactable area -->
+      <label class="input-wrapper toggle-switch-wrapper">
+        <!-- hidden, what makes it work -->
         <input type="checkbox">
-        <div class="switch"></div>
+
+        <!-- input that is shown -->
+        <div class="input-container toggle-switch">
+          <div class="switch"></div>
+        </div>
+
+        <!-- label next to switch -->
+        <div class="input-label-container">
+          <span class="checked-label input-status-label">ON</span>
+          <span class="unchecked-label input-status-label">OFF</span>
+        </div>
+        
+        
       </label>
       
 
