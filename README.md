@@ -3,13 +3,13 @@ A collection of UI pieces made purely in HTML and CSS.
 
 Planned to include:
 - Buttons with Icons
-- Links with Icons
+- ✅ Links with Icons
 - Icon Checkboxes
 - Icon Radio Buttons
-- Toggle Switches (with and without labels)
+- ✅ Toggle Switches (with and without labels)
 - Progress Bar
 
-Note: For CSSS tooltips, see my [CSS Tooltip Template repo](https://github.com/samharp/css-tooltip-template).
+Note: For CSS tooltips, see my [CSS Tooltip Template repo](https://github.com/samharp/css-tooltip-template).
 
 <br>
 
